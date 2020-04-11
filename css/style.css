@@ -456,13 +456,4 @@ footer {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    #showcase {
-        width: auto;
-    }
-    .grid-cards .container .inner-content {
-        font-size: 20px;
-        margin-left: 50px;
-    }
-}
 
