@@ -16,7 +16,8 @@ hr {
     width: 100%;
     /* background: url("https://www.xmple.com/wallpaper/gradient-blue-white-linear-1920x1080-c2-ffffff-add8e6-a-90-f-14.svg") no-repeat ; */
     transform: rotate(180deg);
-    /* text-align: center; */
+    text-align: center;
+    align-items: center;
     color: #000;
     /* background-position: center; */
     /* background-size: cover; */
@@ -24,15 +25,8 @@ hr {
     /* flex-direction: column; */
 }
 
-.grid-cards {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .inner-content, .consult {
     transform: rotate(180deg);
-    float: left;
 }
 
 .consult img{
