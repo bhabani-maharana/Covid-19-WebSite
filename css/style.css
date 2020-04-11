@@ -96,12 +96,8 @@ hr {
     .word > div {
         font-size: 1.4em;
     }
-    .word {
-        display: inline-flex;
-        width: 50%;
-    }
-    .word div{
-        float: right;
+    .word .covid-card {
+        width: 100%;
     }
 }
 
@@ -109,25 +105,18 @@ hr {
     .word > div {
         font-size: 1.3em;
     }
-    .word {
-        display: inline-flex;
-        width: 50%;
+    .word .covid-card {
+        width: 100%;
     }
-    .word div{
-        float: right;
-    }
+
 }
 
 @media only screen and (max-width: 450px) {
     .word > div {
         font-size: 1.1em;
     }
-    .word {
-        display: inline-flex;
-        width: 50%;
-    }
-    .word div{
-        float: right;
+    .word .covid-card {
+        width: 100%;
     }
 }
 
