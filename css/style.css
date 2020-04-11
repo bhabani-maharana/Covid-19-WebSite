@@ -96,26 +96,18 @@ hr {
     .word > div {
         font-size: 1.4em;
     }
-    .word .covid-card {
-        width: 100%;
-    }
+
 }
 
 @media only screen and (max-width: 550px) {
     .word > div {
         font-size: 1.3em;
     }
-    .word .covid-card {
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 450px) {
     .word > div {
         font-size: 1.1em;
-    }
-    .word .covid-card {
-        width: 100%;
     }
 }
 
