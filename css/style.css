@@ -93,20 +93,32 @@ hr {
 }
 
 @media only screen and (max-width: 650px) {
-    .word > h2 {
+    .word > div {
         font-size: 1.4em;
+
+    }
+    .word .covid-card {
+        width: max-content;
     }
 }
 
 @media only screen and (max-width: 550px) {
-    .word > h2 {
+    .word > div {
         font-size: 1.3em;
     }
+    .word .covid-card {
+        width: max-content;
+    }
+
 }
 
 @media only screen and (max-width: 450px) {
-    .word > h2 {
+    .word > div {
         font-size: 1.1em;
+        width: fit-content;
+    }
+    .word .covid-card {
+        width: max-content;
     }
 }
 
@@ -455,17 +467,9 @@ footer {
     }
 }
 
-@media only screen and (max-width: 400px) {
-    .word div {
-        width: 30%;
-        height: 100%;
-    }
-    .word div label, .word div h5 {
-        font-size: 10px;
-    }
-}
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 400px) {
     #showcase {
         width: auto;
     }
@@ -473,5 +477,5 @@ footer {
         font-size: 20px;
         margin-left: 50px;
     }
-
 }
+
