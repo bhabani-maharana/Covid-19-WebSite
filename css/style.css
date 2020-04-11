@@ -29,13 +29,13 @@ hr {
 
 .grid-cards {
     display: inline-flex;
-    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
 .inner-content, .consult {
     transform: rotate(180deg);
     float: left;
-
 }
 
 .consult img{
