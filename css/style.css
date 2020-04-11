@@ -471,9 +471,7 @@ footer {
     }
     .grid-view .container .inner-content {
         font-size: 20px;
+        margin-right: 20px;
     }
-    .panel > p {
-        font-size: 18px;
-        padding: 5px 2px;
-    }
+
 }
