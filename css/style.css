@@ -4,15 +4,22 @@ hr {
 #tracker {
     /* background: url("https://www.xmple.com/wallpaper/gradient-blue-white-linear-1920x1080-c2-ffffff-add8e6-a-90-f-14.svg") no-repeat ; */
     background-size: cover;
+    padding-bottom: 10px;
 }
 
 * {
     padding: 0; margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .word {
     padding-left: 100px;
 }
+.word div span {
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
 #showcase {
     top: 0;
     left: 0;
@@ -31,7 +38,9 @@ hr {
 .inner-content, .consult {
     transform: rotate(180deg);
 }
-
+.grid-cards {
+    padding-top: 30px;
+}
 .consult img{
     width: 80%;
 }
@@ -90,14 +99,16 @@ hr {
     .word > div {
         font-size: 1.0em;
         float: left;
-        margin-right: 8px;
-        margin-left: 4px;
-        width: 30%;
+        margin: 0px 0px 30px 8px;
+        width: 22%;
         left: 20px;
+    }
+    .word div div span {
+        display: flex;
     }
     .word {
         display: inline-flex;
-
+        padding-left: 0;
     }
 
 }
@@ -106,14 +117,15 @@ hr {
     .word > div {
         font-size: 1.0em;
         float: left;
-        margin-right: 8px;
-        margin-left: 4px;
-        width: 30%;
+        width: 22%;
+        margin: 0px 0px 30px 8px;
         left: 20px;
+    }
+    .word div div span {
+        display: flex;
     }
     .word {
         display: inline-flex;
-
     }
 }
 
@@ -121,14 +133,16 @@ hr {
     .word > div {
         font-size: 0.7em;
         float: left;
-        margin-right: 8px;
-        margin-left: 4px;
-        width: 30%;
-        left: 20px;
+        width: 22%;
+        margin: 0px 0px 30px 8px;
+        left: 2px;
     }
+    .word div div span {
+        display: flex;
+    }
+
     .word {
         display: inline-flex;
-        
     }
 }
 
@@ -148,7 +162,6 @@ hr {
 }
 
 #district-panel {
-    background-color: #ede7f0;
     width: 300px;
     text-align: center;
     margin: 0 auto;
@@ -156,13 +169,6 @@ hr {
 #district-table {
     margin: 0 auto;
 }
-#district-table > tbody > tr > th {
-    border: 2px solid brown;
-}
-#district-table > tbody > tr > td {
-    border: 2px solid brown;
-}
-
 
 #odishahelpline {
     width: 100%;
@@ -369,34 +375,6 @@ footer {
     top: -100px;
 }
 
-.word div{
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-.word div:nth-child(2) {
-    animation-delay: .2s;
-}
-.word div:nth-child(3) {
-    animation-delay: .3s;
-}
-.word div:nth-child(4) {
-    animation-delay: .4s;
-}
-#chart {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-delay: .5s;
-}
-
-.word div, #chart { animation-name: fadeInBottom }
-@keyframes fadeInBottom {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to { opacity: 1 }
-}
 
 .covid-card {
     width: 11%; height: 150%;
@@ -443,12 +421,6 @@ footer {
     }
     #covid-map {
         font-size: 18px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    footer > h5 {
-        font-size: 15px;
     }
 }
 

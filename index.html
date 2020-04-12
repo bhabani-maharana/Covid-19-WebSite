@@ -8,6 +8,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/accordion.css">
@@ -26,14 +28,30 @@
 
     <!-- Odisha Covid19 Tracker (Brought to top as said by chandan)-->
     <div id="tracker" class="mt-4">
-        <h2>Odisha Covid 19 Tracker</h2>
-        <h2>ଓଡିଶା କୋଭିଡ୍ 19 ଟ୍ରାକର୍</h2>
+        <h2>Odisha Covid-19 Tracker</h2>
+        <h2>ଓଡିଶା କୋଭିଡ୍-19 ଟ୍ରାକର୍</h2>
         <br>
         <div class="word">
-            <div class="covid-card c-danger"><label class="text-danger font-weight-bold">Confirmed(ନିଶ୍ଚିତ) </label> <h5 id="confirmed" style="color:rgb(255,8,59)"></h5></div>
-            <div class="covid-card c-active"><label class="text-primary font-weight-bold">Active(ସକ୍ରିୟ)</label> <h5 id="active" style="color:rgb(1,124,255)"></h5></div>
-            <div class="covid-card c-recovered"><label class="text-success font-weight-bold">Recovered(ସୁସ୍ଥ)</label> <h5 id="recovered" style="color:rgb(41,167,70)"></h5></div>
-            <div class="covid-card c-deceased"><label class="text-dark font-weight-bold">Deceased(ମୃତ)</label> <h5 id="deceased" style="color:rgb(109,118,126)"></h5></div>
+            <div class="covid-card c-danger">
+                <div class="text-danger font-weight-bold">
+                    <span>Confirmed</span>
+                    <span>(ନିଶ୍ଚିତ) </span>
+                </div> <span id="confirmed" style="color:rgb(255, 0, 51)"></span></div>
+            <div class="covid-card c-active">
+                <div class="text-primary font-weight-bold">
+                    <span>Active</span>
+                    <span>(ସକ୍ରିୟ)</span>
+                </div> <span id="active" style="color:rgb(1,124,255)"></span></div>
+            <div class="covid-card c-recovered">
+                <div class="text-success font-weight-bold">
+                    <span>Recovered</span>
+                    <span>(ସୁସ୍ଥ)</span>
+                </div> <span id="recovered" style="color:rgb(0, 160, 37)"></span></div>
+            <div class="covid-card c-deceased">
+                <div class="text-dark font-weight-bold">
+                    <span >Deceased</span>
+                    <span>(ମୃତ)</span>
+                </div> <span id="deceased" style="color:rgb(83, 83, 83)"></span></div>
         </div>
 
 
@@ -138,9 +156,8 @@
         <section id="district-section">
             <button class="accordion" id="district-accordion" style="padding:5px; font-size: 15px;text-align: center;"><b>District Info</b></button>
             <div class = "panel" id="district-panel">
-                <table id="district-table">
+                <table id="district-table" class="w3-table-all w3-card-4">
                     <tr>
-                        <br>
                         <th>District</th>
                         <th>Confirmed</th>
                     </tr>
