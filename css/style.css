@@ -15,8 +15,8 @@ hr {
 .word {
     padding-left: 100px;
 }
-.word div span {
-    font-size: 1.3em;
+.word div div span, .word div span {
+    font-size: 1.1em;
     margin-bottom: 0;
 }
 
