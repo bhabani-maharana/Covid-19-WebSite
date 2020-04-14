@@ -21,13 +21,17 @@ function loaddata() {
     var bodytext = xmlHttp.responseText;
         
     var text=JSON.parse(bodytext);
-
+    var confCases, activeCases, recovCases, deathCases;
     for(var i=0;i<text.statewise.length;i++) {
         if(text.statewise[i].state=="Odisha") {
             document.getElementById("confirmed").innerHTML = text.statewise[i].confirmed;
             document.getElementById("active").innerHTML = text.statewise[i].active;
             document.getElementById("recovered").innerHTML = text.statewise[i].recovered;
             document.getElementById("deceased").innerHTML = text.statewise[i].deaths;
+            confCases = text.statewise[i].confirmed;
+            activeCases = text.statewise[i].active;
+            recovCases = text.statewise[i].recovered;
+            deathCases = text.statewise[i].deaths;
         }
     }
 
@@ -68,7 +72,58 @@ function loaddata() {
         cell1.innerHTML = district[i];
         cell2.innerHTML = odisha[district[i]].confirmed;
     }
+
+    // load json file for odisha state
+    $.ajax({
+        url: "https://api.covid19india.org/states_daily_csv/confirmed.csv",
+        type: "GET",
+        dataType: "text",
+        success: function(data) {
+            var chartData = {};
+            //for(int i = 0; i <)
+        }
+    });
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", "https://api.covid19india.org/data.json", false );
+    xmlHttp.send( null );
+    var bodytext = xmlHttp.responseText;
+        
+    var text2=JSON.parse(bodytext);
+    var confCases, activeCases, recovCases, deathCases;
+    for(var i=0;i<text2.statewise.length;i++) {
+        if(text2.statewise[i].state=="Odisha") {
+            confCases = text2.statewise[i].confirmed;
+            activeCases = text2.statewise[i].active;
+            recovCases = text2.statewise[i].recovered;
+            deathCases = text2.statewise[i].deaths;
+        }
+    }
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+	title:{
+		text: "",
+		horizontalAlign: "left"
+	},
+	data: [{
+		type: "doughnut",
+        startAngle: 60,
+        radius: "65%",
+		//innerRadius: 60,
+		indexLabelFontSize: 15,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+			{ y: parseInt(activeCases), label: "Active Cases" },
+			{ y: parseInt(deathCases), label: "Death Cases" },
+			{ y: parseInt(recovCases), label: "Recovered Cases" },
+			{ y: parseInt(confCases), label: "Confirmed Cases"},
+		]
+	}]
+});
+chart.render();
 }
+
+
 
 function path_clicked(id) {
     document.getElementById("district-info").innerHTML = document.getElementById(id+"1").innerHTML;
